@@ -387,7 +387,7 @@ describe("muzica", () => {
       const price = new BN(2 * LAMPORTS_PER_SOL);
 
       await program.methods
-        .listTrack(listingTrackId, price)
+        .listTrack(listingTrackId, authority.publicKey, price)
         .accountsStrict({
           seller: contributor1.publicKey,
           track: listingTrackPda,
@@ -395,9 +395,6 @@ describe("muzica", () => {
           listing: listingPda,
           systemProgram: SystemProgram.programId,
         })
-        .remainingAccounts([
-          { pubkey: authority.publicKey, isSigner: false, isWritable: false },
-        ])
         .signers([contributor1])
         .rpc();
 
@@ -491,7 +488,7 @@ describe("muzica", () => {
       const price = new BN(1 * LAMPORTS_PER_SOL);
 
       await program.methods
-        .listTrack(cancelTrackId, price)
+        .listTrack(cancelTrackId, authority.publicKey, price)
         .accountsStrict({
           seller: contributor1.publicKey,
           track: cancelTrackPda,
@@ -499,9 +496,6 @@ describe("muzica", () => {
           listing: listingPda,
           systemProgram: SystemProgram.programId,
         })
-        .remainingAccounts([
-          { pubkey: authority.publicKey, isSigner: false, isWritable: false },
-        ])
         .signers([contributor1])
         .rpc();
 
@@ -697,6 +691,7 @@ describe("muzica", () => {
           shareMint: curveMintPda,
           sellerTokenAccount: sellerTokenAccount,
           tokenProgram: TOKEN_PROGRAM_ID,
+          systemProgram: SystemProgram.programId,
         })
         .signers([buyer])
         .rpc();
@@ -729,6 +724,7 @@ describe("muzica", () => {
             shareMint: curveMintPda,
             sellerTokenAccount: sellerTokenAccount,
             tokenProgram: TOKEN_PROGRAM_ID,
+            systemProgram: SystemProgram.programId,
           })
           .signers([buyer])
           .rpc();
@@ -870,7 +866,7 @@ describe("muzica", () => {
       const treasuryBalance = await connection.getBalance(treasuryPda);
       
       if (treasuryBalance > 0) {
-        const rentExempt = await connection.getMinimumBalanceForRentExemption(0);
+        const rentExempt = await connection.getMinimumBalanceForRentExemption(8);
         const withdrawable = treasuryBalance - rentExempt;
 
         if (withdrawable > 0) {

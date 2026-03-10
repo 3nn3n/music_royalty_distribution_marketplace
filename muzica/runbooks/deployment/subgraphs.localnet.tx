@@ -1,0 +1,117 @@
+
+action "muzica_escrow_deposited" "svm::deploy_subgraph" {
+    program_id = action.deploy_muzica.program_id
+    program_idl = action.deploy_muzica.program_idl
+    block_height = 0 // action.deploy_muzica.block_height
+    event {
+        name = "EscrowDeposited"
+    }
+}
+
+action "muzica_fees_withdrawn" "svm::deploy_subgraph" {
+    program_id = action.deploy_muzica.program_id
+    program_idl = action.deploy_muzica.program_idl
+    block_height = 0 // action.deploy_muzica.block_height
+    event {
+        name = "FeesWithdrawn"
+    }
+}
+
+action "muzica_listing_cancelled" "svm::deploy_subgraph" {
+    program_id = action.deploy_muzica.program_id
+    program_idl = action.deploy_muzica.program_idl
+    block_height = 0 // action.deploy_muzica.block_height
+    event {
+        name = "ListingCancelled"
+    }
+}
+
+action "muzica_market_config_updated" "svm::deploy_subgraph" {
+    program_id = action.deploy_muzica.program_id
+    program_idl = action.deploy_muzica.program_idl
+    block_height = 0 // action.deploy_muzica.block_height
+    event {
+        name = "MarketConfigUpdated"
+    }
+}
+
+action "muzica_marketplace_initialized" "svm::deploy_subgraph" {
+    program_id = action.deploy_muzica.program_id
+    program_idl = action.deploy_muzica.program_idl
+    block_height = 0 // action.deploy_muzica.block_height
+    event {
+        name = "MarketplaceInitialized"
+    }
+}
+
+action "muzica_nft_bought_with_curve_price" "svm::deploy_subgraph" {
+    program_id = action.deploy_muzica.program_id
+    program_idl = action.deploy_muzica.program_idl
+    block_height = 0 // action.deploy_muzica.block_height
+    event {
+        name = "NFTBoughtWithCurvePrice"
+    }
+}
+
+action "muzica_nft_purchased" "svm::deploy_subgraph" {
+    program_id = action.deploy_muzica.program_id
+    program_idl = action.deploy_muzica.program_idl
+    block_height = 0 // action.deploy_muzica.block_height
+    event {
+        name = "NFTPurchased"
+    }
+}
+
+action "muzica_price_updated" "svm::deploy_subgraph" {
+    program_id = action.deploy_muzica.program_id
+    program_idl = action.deploy_muzica.program_idl
+    block_height = 0 // action.deploy_muzica.block_height
+    event {
+        name = "PriceUpdated"
+    }
+}
+
+action "muzica_shares_updated" "svm::deploy_subgraph" {
+    program_id = action.deploy_muzica.program_id
+    program_idl = action.deploy_muzica.program_idl
+    block_height = 0 // action.deploy_muzica.block_height
+    event {
+        name = "SharesUpdated"
+    }
+}
+
+action "muzica_stem_nft_minted" "svm::deploy_subgraph" {
+    program_id = action.deploy_muzica.program_id
+    program_idl = action.deploy_muzica.program_idl
+    block_height = 0 // action.deploy_muzica.block_height
+    event {
+        name = "StemNFTMinted"
+    }
+}
+
+action "muzica_tokens_bought" "svm::deploy_subgraph" {
+    program_id = action.deploy_muzica.program_id
+    program_idl = action.deploy_muzica.program_idl
+    block_height = 0 // action.deploy_muzica.block_height
+    event {
+        name = "TokensBought"
+    }
+}
+
+action "muzica_tokens_sold" "svm::deploy_subgraph" {
+    program_id = action.deploy_muzica.program_id
+    program_idl = action.deploy_muzica.program_idl
+    block_height = 0 // action.deploy_muzica.block_height
+    event {
+        name = "TokensSold"
+    }
+}
+
+action "muzica_track_initialized" "svm::deploy_subgraph" {
+    program_id = action.deploy_muzica.program_id
+    program_idl = action.deploy_muzica.program_idl
+    block_height = 0 // action.deploy_muzica.block_height
+    event {
+        name = "TrackInitialized"
+    }
+}

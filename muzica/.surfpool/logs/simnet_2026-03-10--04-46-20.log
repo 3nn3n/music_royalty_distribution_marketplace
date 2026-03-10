@@ -1,0 +1,43 @@
+[2026-03-10--04-46-20 INFO actix_server::builder] starting 5 workers
+[2026-03-10--04-46-20 INFO actix_server::server] Tokio runtime found; starting in existing Tokio runtime
+[2026-03-10--04-46-20 INFO actix_server::server] starting service: "actix-web-service-127.0.0.1:18488", workers: 5, listening on: 127.0.0.1:18488
+[2026-03-10--04-46-21 INFO parity_ws] Listening for new connections on 127.0.0.1:8900.
+[2026-03-10--04-46-22 INFO txtx::svm::deploy_program] [Recovery Instructions] - An ephemeral authority account will be created and funded to write to the buffer account.
+[2026-03-10--04-46-22 INFO txtx::svm::deploy_program] [Recovery Instructions] - Please save the following information in case the deployment fails and the account needs to be recovered:
+[2026-03-10--04-46-22 INFO txtx::svm::deploy_program] [Recovery Instructions] - Ephemeral authority public key: BPC25GXRKLHy7PZYfKrLGTZREAsUpcRVD4KBzL6rGoB3
+[2026-03-10--04-46-22 INFO txtx::svm::deploy_program] [Recovery Instructions] - Ephemeral authority secret key: [219, 94, 138, 78, 15, 104, 195, 217, 41, 87, 100, 64, 61, 187, 166, 4, 93, 159, 110, 103, 119, 175, 248, 73, 169, 144, 211, 44, 2, 251, 129, 105, 154, 68, 27, 17, 67, 66, 84, 153, 245, 23, 20, 163, 253, 185, 80, 76, 233, 14, 38, 89, 250, 206, 36, 9, 210, 255, 103, 35, 207, 158, 170, 134]
+[2026-03-10--04-46-23 INFO txtx::svm::deploy_program] Account Created - Ephemeral authority account created and funded to write to buffer
+[2026-03-10--04-46-23 INFO txtx::svm::deploy_program] [Recovery Instructions] - Creating program buffer account at pubkey C23DGtisobdtbwBEDrR37UzThw2L1F7wrQp5ZMyGLM5D
+[2026-03-10--04-46-23 INFO txtx::svm::deploy_program] Account Created - Program buffer account created
+[2026-03-10--04-46-40 INFO txtx::svm::deploy_program] Buffer Ready - Writing to buffer account is complete
+[2026-03-10--04-46-40 INFO txtx::svm::deploy_program] Program Created - Program 24iCyiUg1Vd5eGPEua31dVn7rYAuLiYBDkgpHbLhC9ob has been deployed
+[2026-03-10--04-46-41 INFO txtx::svm::deploy_program] Complete - Ephemeral authority account closed and leftover funds returned to payer
+[2026-03-10--04-46-42 INFO txtx::svm::deploy_subgraph] Subgraph Deployed - Subgraph MarketplaceInitialized for program 24iCyiUg1Vd5eGPEua31dVn7rYAuLiYBDkgpHbLhC9ob has been deployed
+[2026-03-10--04-46-42 INFO txtx::svm::deploy_subgraph] Subgraph Deployed - Your subgraph can be reached at "http://127.0.0.1:18488/accounts"
+[2026-03-10--04-46-42 INFO txtx::svm::deploy_subgraph] Subgraph Deployed - Subgraph FeesWithdrawn for program 24iCyiUg1Vd5eGPEua31dVn7rYAuLiYBDkgpHbLhC9ob has been deployed
+[2026-03-10--04-46-42 INFO txtx::svm::deploy_subgraph] Subgraph Deployed - Your subgraph can be reached at "http://127.0.0.1:18488/accounts"
+[2026-03-10--04-46-42 INFO txtx::svm::deploy_subgraph] Subgraph Deployed - Subgraph EscrowDeposited for program 24iCyiUg1Vd5eGPEua31dVn7rYAuLiYBDkgpHbLhC9ob has been deployed
+[2026-03-10--04-46-42 INFO txtx::svm::deploy_subgraph] Subgraph Deployed - Your subgraph can be reached at "http://127.0.0.1:18488/accounts"
+[2026-03-10--04-46-42 INFO txtx::svm::deploy_subgraph] Subgraph Deployed - Subgraph TrackInitialized for program 24iCyiUg1Vd5eGPEua31dVn7rYAuLiYBDkgpHbLhC9ob has been deployed
+[2026-03-10--04-46-42 INFO txtx::svm::deploy_subgraph] Subgraph Deployed - Your subgraph can be reached at "http://127.0.0.1:18488/accounts"
+[2026-03-10--04-46-42 INFO txtx::svm::deploy_subgraph] Subgraph Deployed - Subgraph PriceUpdated for program 24iCyiUg1Vd5eGPEua31dVn7rYAuLiYBDkgpHbLhC9ob has been deployed
+[2026-03-10--04-46-42 INFO txtx::svm::deploy_subgraph] Subgraph Deployed - Your subgraph can be reached at "http://127.0.0.1:18488/accounts"
+[2026-03-10--04-46-42 INFO txtx::svm::deploy_subgraph] Subgraph Deployed - Subgraph TokensSold for program 24iCyiUg1Vd5eGPEua31dVn7rYAuLiYBDkgpHbLhC9ob has been deployed
+[2026-03-10--04-46-42 INFO txtx::svm::deploy_subgraph] Subgraph Deployed - Your subgraph can be reached at "http://127.0.0.1:18488/accounts"
+[2026-03-10--04-46-42 INFO txtx::svm::deploy_subgraph] Subgraph Deployed - Subgraph MarketConfigUpdated for program 24iCyiUg1Vd5eGPEua31dVn7rYAuLiYBDkgpHbLhC9ob has been deployed
+[2026-03-10--04-46-42 INFO txtx::svm::deploy_subgraph] Subgraph Deployed - Your subgraph can be reached at "http://127.0.0.1:18488/accounts"
+[2026-03-10--04-46-42 INFO txtx::svm::deploy_subgraph] Subgraph Deployed - Subgraph TokensBought for program 24iCyiUg1Vd5eGPEua31dVn7rYAuLiYBDkgpHbLhC9ob has been deployed
+[2026-03-10--04-46-42 INFO txtx::svm::deploy_subgraph] Subgraph Deployed - Your subgraph can be reached at "http://127.0.0.1:18488/accounts"
+[2026-03-10--04-46-42 INFO txtx::svm::deploy_subgraph] Subgraph Deployed - Subgraph NFTPurchased for program 24iCyiUg1Vd5eGPEua31dVn7rYAuLiYBDkgpHbLhC9ob has been deployed
+[2026-03-10--04-46-42 INFO txtx::svm::deploy_subgraph] Subgraph Deployed - Your subgraph can be reached at "http://127.0.0.1:18488/accounts"
+[2026-03-10--04-46-42 INFO txtx::svm::deploy_subgraph] Subgraph Deployed - Subgraph ListingCancelled for program 24iCyiUg1Vd5eGPEua31dVn7rYAuLiYBDkgpHbLhC9ob has been deployed
+[2026-03-10--04-46-42 INFO txtx::svm::deploy_subgraph] Subgraph Deployed - Your subgraph can be reached at "http://127.0.0.1:18488/accounts"
+[2026-03-10--04-46-42 INFO txtx::svm::deploy_subgraph] Subgraph Deployed - Subgraph NFTBoughtWithCurvePrice for program 24iCyiUg1Vd5eGPEua31dVn7rYAuLiYBDkgpHbLhC9ob has been deployed
+[2026-03-10--04-46-42 INFO txtx::svm::deploy_subgraph] Subgraph Deployed - Your subgraph can be reached at "http://127.0.0.1:18488/accounts"
+[2026-03-10--04-46-42 INFO txtx::svm::deploy_subgraph] Subgraph Deployed - Subgraph StemNFTMinted for program 24iCyiUg1Vd5eGPEua31dVn7rYAuLiYBDkgpHbLhC9ob has been deployed
+[2026-03-10--04-46-42 INFO txtx::svm::deploy_subgraph] Subgraph Deployed - Your subgraph can be reached at "http://127.0.0.1:18488/accounts"
+[2026-03-10--04-46-42 INFO txtx::svm::deploy_subgraph] Subgraph Deployed - Subgraph SharesUpdated for program 24iCyiUg1Vd5eGPEua31dVn7rYAuLiYBDkgpHbLhC9ob has been deployed
+[2026-03-10--04-46-42 INFO txtx::svm::deploy_subgraph] Subgraph Deployed - Your subgraph can be reached at "http://127.0.0.1:18488/accounts"
+[2026-03-10--04-47-11 INFO parity_ws::io] Accepted a new tcp connection from 127.0.0.1:40028.
+[2026-03-10--04-48-26 INFO parity_ws::io] Accepted a new tcp connection from 127.0.0.1:55724.
+[2026-03-10--04-49-48 INFO parity_ws::io] Accepted a new tcp connection from 127.0.0.1:55100.

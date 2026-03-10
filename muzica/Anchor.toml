@@ -15,7 +15,7 @@ muzica = "24iCyiUg1Vd5eGPEua31dVn7rYAuLiYBDkgpHbLhC9ob"
 url = "https://api.apr.dev"
 
 [provider]
-cluster = "devnet"
+cluster = "localnet"
 wallet = "~/.config/solana/id.json"
 
 [scripts]

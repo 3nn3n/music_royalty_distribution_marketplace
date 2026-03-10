@@ -1,0 +1,28 @@
+[2026-03-10--05-03-02 INFO actix_server::builder] starting 5 workers
+[2026-03-10--05-03-02 INFO actix_server::server] Tokio runtime found; starting in existing Tokio runtime
+[2026-03-10--05-03-02 INFO actix_server::server] starting service: "actix-web-service-127.0.0.1:18488", workers: 5, listening on: 127.0.0.1:18488
+[2026-03-10--05-03-03 INFO parity_ws] Listening for new connections on 127.0.0.1:8900.
+[2026-03-10--05-03-04 INFO txtx::svm::deploy_program] [Recovery Instructions] - An ephemeral authority account will be created and funded to write to the buffer account.
+[2026-03-10--05-03-04 INFO txtx::svm::deploy_program] [Recovery Instructions] - Please save the following information in case the deployment fails and the account needs to be recovered:
+[2026-03-10--05-03-04 INFO txtx::svm::deploy_program] [Recovery Instructions] - Ephemeral authority public key: DEj3n6x6Fz6Rax3TkDReK6Tcvf3wycJDbqZwRo1Hx8zn
+[2026-03-10--05-03-04 INFO txtx::svm::deploy_program] [Recovery Instructions] - Ephemeral authority secret key: [197, 42, 91, 12, 18, 48, 224, 133, 80, 208, 201, 120, 235, 63, 55, 163, 109, 147, 91, 73, 183, 181, 81, 246, 204, 171, 149, 25, 57, 145, 159, 154, 181, 208, 86, 91, 153, 167, 210, 63, 14, 210, 250, 209, 71, 67, 28, 39, 107, 96, 196, 116, 217, 208, 119, 194, 29, 52, 111, 29, 18, 34, 58, 43]
+[2026-03-10--05-03-04 INFO txtx::svm::deploy_program] Account Created - Ephemeral authority account created and funded to write to buffer
+[2026-03-10--05-03-04 INFO txtx::svm::deploy_program] [Recovery Instructions] - Creating program buffer account at pubkey BSia2Fmu6cbiARBkRr2yn9J4QGXrtu1afWukURdPrSwb
+[2026-03-10--05-03-05 INFO txtx::svm::deploy_program] Account Created - Program buffer account created
+[2026-03-10--05-03-07 INFO parity_ws::io] Accepted a new tcp connection from 127.0.0.1:51612.
+[2026-03-10--05-03-21 INFO txtx::svm::deploy_program] Buffer Ready - Writing to buffer account is complete
+[2026-03-10--05-03-21 ERROR txtx::svm::send_transaction] Failed - Failed to broadcast transaction
+[2026-03-10--05-03-21 ERROR txtx::svm::send_transaction] Failed - error: unable to send and confirm transaction (RPC response error -32002: Transaction simulation failed: Error processing Instruction 0: custom program error: 0x0: 3 log messages:
+Program 11111111111111111111111111111111 invoke [1]
+Create Account: account Address { address: 24iCyiUg1Vd5eGPEua31dVn7rYAuLiYBDkgpHbLhC9ob, base: None } already in use
+Program 11111111111111111111111111111111 failed: custom program error: 0x0; 3 log messages:
+  Program 11111111111111111111111111111111 invoke [1]
+  Create Account: account Address { address: 24iCyiUg1Vd5eGPEua31dVn7rYAuLiYBDkgpHbLhC9ob, base: None } already in use
+  Program 11111111111111111111111111111111 failed: custom program error: 0x0
+)
+[2026-03-10--05-03-31 INFO actix_server::worker] shutting down idle worker
+[2026-03-10--05-03-31 INFO actix_server::accept] accept thread stopped
+[2026-03-10--05-03-31 INFO actix_server::worker] shutting down idle worker
+[2026-03-10--05-03-31 INFO actix_server::worker] shutting down idle worker
+[2026-03-10--05-03-31 INFO actix_server::worker] shutting down idle worker
+[2026-03-10--05-03-31 INFO actix_server::worker] shutting down idle worker

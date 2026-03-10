@@ -272,6 +272,7 @@ pub mod muzica {
     pub fn list_track(
     ctx: Context<ListTrack>,
     _track_id: u64,
+    _authority: Pubkey,
     price: u64,
 ) -> Result<()> {
     let listing = &mut ctx.accounts.listing;
@@ -353,7 +354,7 @@ pub fn withdraw_marketplace_fees(
     let treasury = &ctx.accounts.treasury;
 
     let treasury_balance = treasury.to_account_info().lamports();
-    let rent_exempt = Rent::get()?.minimum_balance(0);
+    let rent_exempt = Rent::get()?.minimum_balance(8);
     let available = treasury_balance.checked_sub(rent_exempt).unwrap_or(0);
 
     require!(amount <= available, ErrorCode::InsufficientFunds);
@@ -625,12 +626,43 @@ pub fn sell_tokens(
     token::burn(burn_ctx, amount)?;
 
     //  Send SOL from treasury → seller (minus fee)
-    **ctx.accounts.treasury.to_account_info().try_borrow_mut_lamports()? -= refund as u64;
-    **ctx.accounts.seller.to_account_info().try_borrow_mut_lamports()? += seller_amount;
+    let track_key = ctx.accounts.track.key();
+    let vault_seeds = &[
+        b"curve_vault".as_ref(),
+        track_key.as_ref(),
+        &[ctx.bumps.treasury],
+    ];
+    let vault_signer = &[&vault_seeds[..]];
+
+    let ix_seller = anchor_lang::solana_program::system_instruction::transfer(
+        &ctx.accounts.treasury.key(),
+        &ctx.accounts.seller.key(),
+        seller_amount,
+    );
+    anchor_lang::solana_program::program::invoke_signed(
+        &ix_seller,
+        &[
+            ctx.accounts.treasury.to_account_info(),
+            ctx.accounts.seller.to_account_info(),
+        ],
+        vault_signer,
+    )?;
 
     //  Send marketplace fee to marketplace treasury
     if fee > 0 {
-        **ctx.accounts.marketplace_treasury.to_account_info().try_borrow_mut_lamports()? += fee;
+        let ix_fee = anchor_lang::solana_program::system_instruction::transfer(
+            &ctx.accounts.treasury.key(),
+            &ctx.accounts.marketplace_treasury.key(),
+            fee,
+        );
+        anchor_lang::solana_program::program::invoke_signed(
+            &ix_fee,
+            &[
+                ctx.accounts.treasury.to_account_info(),
+                ctx.accounts.marketplace_treasury.to_account_info(),
+            ],
+            vault_signer,
+        )?;
     }
 
     //  Decrease supply
@@ -896,7 +928,7 @@ pub fn sell_with_slippage_check(
 
 
     #[derive(Accounts)]
-    #[instruction(track_id: u64, authority: Pubkey)]
+    #[instruction(amount: u64, track_id: u64)]
     pub struct EscrowDistribute<'info> {
 
         #[account(
@@ -1549,6 +1581,7 @@ pub struct SellTokens<'info> {
     pub seller_token_account: Account<'info, TokenAccount>,
 
     pub token_program: Program<'info, Token>,
+    pub system_program: Program<'info, System>,
 }
 
 #[derive(Accounts)]
